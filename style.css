@@ -1,0 +1,157 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.box2 {
+    background-color: rgb(45, 55, 72);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.box2:hover {
+    background-color: rgb(52, 64, 83);
+}
+
+.forInfo {
+    background-color: rgb(45, 55, 72);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1px;
+    border-radius: 5px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btnDel {
+    width: 80px;
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 0px 16px 0px black;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnDel:hover {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.btnEdit {
+    width: 80px;
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 0px 16px 0px black;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnEdit:hover {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+
+/* boxAdd */
+.boxAdd {
+    width: 60%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(117, 223, 221);
+}
+
+/* inpAddName */
+.inpAddName {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+/* inpAddphone */
+.inpAddphone {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+/* btnAdd */
+.btnAdd {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btnAdd:hover {
+    background-color: rgb(45, 55, 72);
+    color: white;
+}
+
+
+
+/* inpEditName */
+.inpEditName {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+.inpEditName:hover {
+    box-shadow: 0px 0px 15px black;
+}
+
+/* inpEditAge */
+.inpEditAge {
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+.inpEditAge:hover {
+    box-shadow: 0px 0px 15px black;
+}
+
+/* btnEditInto */
+.btnEditInto {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btnEditInto:hover {
+    background-color: rgb(45, 55, 72);
+    color: white;
+}
