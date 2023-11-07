@@ -1,54 +1,46 @@
-let box = document.querySelector(".box")
+let tbody = document.querySelector(".tbody")
+let inpAddName = document.querySelector(".inpAddName")
+let inpAddphone = document.querySelector(".inpAddphone")
+let btnAdd = document.querySelector(".btnAdd")
 let dialogEdit = document.querySelector(".dialogEdit")
 let inpEditName = document.querySelector(".inpEditName")
 let inpEditAge = document.querySelector(".inpEditAge")
 let btnEditInto = document.querySelector(".btnEditInto")
-let inpAddName = document.querySelector(".inpAddName")
-let inpAddphone = document.querySelector(".inpAddphone")
-let btnAdd = document.querySelector(".btnAdd")
 
 
-
-// local_data
 let data = [
     {
         id: 1,
-        name: "Khojaev Shohdidor",
-        phone: 998774433,
+        name: "Nastulloev Muhammadullo",
+        age: 9928899999,
         isComplete: false
     },
     {
         id: 2,
-        name: "Nastulloev Muhammadullo",
-        phone: 9877333221,
+        name: "Surush Qalandarsho",
+        age: 9992338877,
         isComplete: false
-    }
+    },
 ]
 
-// get
+
+
+//get
 function get() {
-    box.innerHTML = " "
+    tbody.innerHTML = ""
     data.forEach((elem) => {
+        let tr = document.createElement("tr")
 
-        let box2 = document.createElement("div")
-        box2.classList.add("box2")
+        let name = document.createElement("td")
+        name.innerHTML = elem.name
 
+        let age = document.createElement("td")
+        age.innerHTML = elem.age
 
-        let forName = document.createElement("h1")
-        forName.innerHTML = elem.name
-
-        let forAge = document.createElement("h1")
-        forAge.innerHTML = elem.phone
-
-        let forInfo = document.createElement("button")
-        forInfo.innerHTML = "info"
-        forInfo.classList.add("btnDel")
-      
-        //delete
+        //delete____________________________________
         let btnDel = document.createElement("button")
         btnDel.classList.add("btnDel")
-        btnDel.innerHTML = "delete"
-
+        btnDel.innerHTML = "🗑"
         btnDel.onclick = () => {
             data = data.filter(e => {
                 return e.id !== elem.id;
@@ -57,7 +49,7 @@ function get() {
         }
 
 
-        //edit
+        //edit________________________________________
         let btnEdit = document.createElement("button")
         btnEdit.classList.add("btnEdit")
         btnEdit.innerHTML = "Edit"
@@ -65,7 +57,7 @@ function get() {
             editUser(elem.id)
         }
 
-        //iscomplete
+        //iscomplete__________________________________
         let complete = document.createElement("input")
         complete.type = "checkbox"
         complete.checked = elem.isComplete
@@ -74,50 +66,59 @@ function get() {
         }
 
         if (elem.isComplete == true) {
-            forName.style.textDecoration = "line-through"
-            forName.style.color = "red"
+            name.style.textDecoration = "line-through"
+            name.style.color = "red"
         }
 
-        box2.append(forName, forAge, complete, btnDel, btnEdit, forInfo)
-        box.appendChild(box2)
+
+        tr.append(name, age, btnDel, btnEdit, complete)
+        tbody.append(tr)
     })
 }
 get()
 
 
+//add________________________________________________________
 
-// add
 btnAdd.onclick = () => {
     if (inpAddName.value == "" && inpAddphone.value == "") {
         alert("Empty string")
     }
-    let newUser = {
-        id: new Date(),
-        name: inpAddName.value,
-        phone: inpAddphone.value,
-        isComplete: false
+    else{
+        let newUser = {
+            id: new Date(),
+            name: inpAddName.value,
+            age: inpAddphone.value,
+            isComplete: false
+        }
+        inpAddName.value = ''
+        inpAddphone.value = ''
+        data.push(newUser)
+        get()
     }
-    inpAddName.value = ''
-    inpAddphone.value = ''
-    data.push(newUser)
-    get()
 }
 
 
-//edit
+//edit_______________________________________________________
+
+
 let idx
+let btnclose=document.querySelector(".btnclose")
+btnclose.onclick=()=>{
+    dialogEdit.close()
+}
 function editUser(id) {
     dialogEdit.showModal()
     let user = data.find((elem) => elem.id == id)
     inpEditName.value = user.name
-    inpEditAge.value = user.phone
+    inpEditAge.value = user.age
     idx = user.id
 }
 btnEditInto.onclick = () => {
     data = data.map((elem) => {
         if (elem.id == idx) {
             elem.name = inpEditName.value
-            elem.phone = inpEditAge.value
+            elem.age = inpEditAge.value
         }
         return elem
     })
@@ -125,7 +126,7 @@ btnEditInto.onclick = () => {
     dialogEdit.close()
 }
 
-//isComplete
+// isCompelte_________________________________________________
 function completeuser(id) {
     data = data.map((elem) => {
         if (elem.id == id) {
@@ -135,8 +136,3 @@ function completeuser(id) {
     })
     get();
 }
-
-
-
-
-
