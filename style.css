@@ -4,6 +4,7 @@ body {
     color: white;
 }
 
+/*box2 */
 .box2 {
     background-color: rgb(45, 55, 72);
     color: white;
@@ -18,9 +19,9 @@ body {
     background-color: rgb(52, 64, 83);
 }
 
+/*info*/
 .forInfo {
     background-color: rgb(45, 55, 72);
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,6 +31,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*btnDel */
 .btnDel {
     width: 80px;
     height: 40px;
@@ -45,6 +47,7 @@ body {
     color: white;
 }
 
+/* btnEdit*/
 .btnEdit {
     width: 80px;
     height: 40px;
@@ -104,7 +107,6 @@ body {
     border: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 .btnAdd:hover {
     background-color: rgb(45, 55, 72);
     color: white;
