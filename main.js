@@ -43,6 +43,7 @@ function get() {
         let forInfo = document.createElement("button")
         forInfo.innerHTML = "info"
         forInfo.classList.add("btnDel")
+      
         //delete
         let btnDel = document.createElement("button")
         btnDel.classList.add("btnDel")
