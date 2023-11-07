@@ -5,46 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--style css-->
     <link rel="stylesheet" href="style.css">
-     <!-- link icons -->
-    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
-    <title>ToDo_list</title>
+    <title>Document</title>
 </head>
 
 <body>
+    <h1 class="titleTable">Table</h1>
 
-   <!--  for Add -->
     <div class="boxAdd">
-        <input type="text" name="" id="" class="inpAddName" placeholder="Enter your Fullname:">
-        <input type="text" name="" id="" class="inpAddphone" placeholder="Enter your Phone:">
-        <button class="btnAdd">ADD</button>
+        <input type="text" name="" id="" class="inpAddName" placeholder="Enter your FullName:">
+        <input type="text" name="" id="" class="inpAddphone" placeholder="Enter your age:  ">
+        <button class="btnAdd">Add</button>
     </div>
 
-<!-- for info -->
-    <div class="forInfo">
-        <h1>FullName </h1>
-        <h1><i class="fa-solid fa-phone"></i>Phone</h1>
-        <h1><i class="fa-solid fa-user"></i>Status</h1>
-        <h1><i class="fa-solid fa-trash-can"></i>Delete</h1>
-        <h1><i class="fa-regular fa-pen-to-square"></i>Edit</h1>
-        <h1>Info </h1>
-    </div>
+    <table class="table">
+        <thead class="thead">
+            <tr class="main1">
+                <th class="name">Ф.И.О</th>
+                <th>НОМЕР ТЕЛЕФОНА</th>
+                <th class="name1">Functional </th>
+            </tr>
+        </thead>
 
-  
-    <!-- box for js -->
-    <div class="box"></div>
-    
-    <!--dialog for Edit -->
-    <dialog class="dialogEdit">
+        <tbody class="tbody">
+
+        </tbody>
+    </table>
+
+    <!-- edit -->
+    <dialog class="dialogEdit cssedit">
         <input type="text" class="inpEditName">
-        <input type="text" class="inpEditAge">
+        <input type="text" class="inpEditAge"><br><br>
         <button class="btnEditInto">Edit</button>
-    </dialog>
-
-    <!-- dialog for info -->
-    <dialog class="dialogInfo">
-        <h1>Information</h1>
+        <button class="btnclose">cancel</button>
     </dialog>
 
 
